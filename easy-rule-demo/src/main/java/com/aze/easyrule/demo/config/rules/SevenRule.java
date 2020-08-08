@@ -16,16 +16,16 @@ import org.springframework.stereotype.Component;
 
 @Rule
 @Component
-public class ScheduleRule {
+public class SevenRule {
 
   @Condition
-  public boolean isFizz(@Fact("number") Integer number) {
+  public boolean check(@Fact("number") Integer number) {
     return number % 5 == 0;
   }
 
   @Action
-  public void printFizz() {
-    System.out.print("fizz");
+  public void print() {
+    System.out.println("fizz");
   }
 
   @Priority
